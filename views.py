@@ -24,7 +24,7 @@ class View:
 def Adm_login(email, senha):
     for Adm in View.Adm_listar():
       if Adm.get_email() == email and Adm.get_senha() == senha:
-        return cliente
+        return Adm
     return None
 
   def departamento_listar():
