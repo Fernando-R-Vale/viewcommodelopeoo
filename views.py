@@ -20,14 +20,12 @@ class View:
   def Adm_excluir(id):
     Adm = adm(id, "", "")
     Nadm.excluir(Adm)  
-
-  def Adm_login(email,senha):
-    a = adm(0, email, senha)
-    for i in Nadm.listar():
-      if i.get_email() == a.get_email() and i.get_senha() == a.get_senha():
-        return True
-        break
-      else: pass
+    
+def Adm_login(email, senha):
+    for Adm in View.Adm_listar():
+      if Adm.get_email() == email and Adm.get_senha() == senha:
+        return cliente
+    return None
 
   def departamento_listar():
     return Ndepartamento.listar()
